@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import CreateWriteModal from './CreateWriteModal';
+import CreateWriteModal from './createWriteModal';
 
 const meat: Meta<typeof CreateWriteModal> = {
   title: 'Social/CreateWriteModal',

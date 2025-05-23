@@ -1,9 +1,7 @@
-import { getSocialList } from '@/api/social/api';
-import SocialListGrid from './SocialListGrid';
+// import SocialListGrid from './socialListGrid';
 
 const Page = async () => {
-  const initialSocialList = await getSocialList();
-  return <SocialListGrid initialSocialList={initialSocialList} />;
+  return <></>;
 };
 
 export default Page;

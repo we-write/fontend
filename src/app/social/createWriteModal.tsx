@@ -9,7 +9,7 @@ import {
   validateCapacity,
   validateLocation,
   validateRegistrationEnd,
-} from '@/validators/social';
+} from '@/utils/validators/social';
 import { truncateText } from '@/utils/string';
 import { useRef } from 'react';
 import { Controller, useForm } from 'react-hook-form';
@@ -150,9 +150,12 @@ const CreateWriteModal = () => {
       {/* 모집 정원 InputForm */}
       <InputForm
         name="capacity"
+        type="number"
         label="모집 정원"
         placeholder="2-10인 사이로 입력해 주세요."
-        register={register('capacity', validateCapacity)}
+        register={register('capacity', {
+          validate: validateCapacity,
+        })}
         hasError={!!errors.capacity}
         helperText={errors.capacity?.message}
       />
